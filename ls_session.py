@@ -39,7 +39,7 @@ class LS_session: #loads up a save's various files, contains game info, talks to
             print("Trying updates")
             print(self.lb_arr)
 
-    def try_lb_updates(self):
+    def try_lb_updates(self): #THIS HAS NOT BEEN DEBUGGED YET
 
         self.success_dict = {}
         self.already_there = []
@@ -105,6 +105,11 @@ class LS_session: #loads up a save's various files, contains game info, talks to
 
             if self.success_dict[t] == "no_move_conflict":
                 self.success_dict[t] = "success"
+
+        for q in range(len(self.lb_arr)):
+
+            if self.lb_arr[q].subtype = "move":
+                setattr(self.lb_arr[q], "status", self.success_dict[q])
 
         print(self.success_dict)
 
