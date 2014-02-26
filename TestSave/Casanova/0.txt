@@ -1,0 +1,1 @@
+type=money;amount=1200

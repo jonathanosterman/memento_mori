@@ -1,0 +1,9 @@
+0.Decide ueber behaviors/goals (mostly according to character data: loyalty and info in inventory)
+1.Decide high level behaviors/strategies (according to projected likelihood of success and variables of the UB)
+2.Decide mid level behaviors (e.g. for peons: how faithfully to carry out a command)
+3.Manage mid level behaviors (order of commands, when to move on to next one; character can have multiple MLBs in parallel)
+4.Manage literal/low level behaviors (trigger LLBs according to currently executing MLB, see note 1)
+5.Literal/low level behavior (a single list of literal moves to make)
+
+Note 1: You can have multiple MLBs listening at the same time, but should there be multiple ones allowed to write to the LLB list at once?  If not they seem single-minded, but if so you could easily get conflicting orders.
+Possible solution: Each HLB and MLB has an "urgency" scalar attached to it: multiple HLBs and MLBs can run in parallel, but only the MLB with the heighest urgency is allowed to write to the LLB list.  The rest of the running MLBs and HLBs are just listening and adjusting their urgencies according to events.  If a "background" HLB or MLB gets a mider urgency rating than the current one, then it takes over.

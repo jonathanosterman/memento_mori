@@ -1,0 +1,1 @@
+type=person;subtype=peon;name=Casanova;personality=passive;nat_health=30;nat_calm=40;cur_health=20;cur_calm=30;position=0,1,1;orientation=S;sprite_folder=default_ch_walt
