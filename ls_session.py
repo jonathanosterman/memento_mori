@@ -91,6 +91,20 @@ class LS_session: #loads up a save's various files, contains game info, talks to
 
                         for w in self.movetry_arr[i][j][k]:
                             self.success_dict[w] = movefrom_arr[i][j][k] #can only ever contain one anyway; index indicates a character as per its command index in the lb_arr
+                            
+        for e in range(2*len(self.success_dict)): #just making sure thing propogate fully 
+            for g in self.success_dict:
+
+                if type(self.success_dict[g]) is int:
+                    self.success_dict[g] = self.success_dict[self.success_dict[g]]
+
+        for t in self.success_dict:
+
+            if type(self.success_dict[t]) is int:
+                self.success_dict[t] = "success"
+
+            if self.success_dict[t] == "no_move_conflict":
+                self.success_dict[t] = "success"
 
         print(self.success_dict)
 
