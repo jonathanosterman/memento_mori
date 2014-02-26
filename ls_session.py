@@ -27,6 +27,9 @@ class LS_session: #loads up a save's various files, contains game info, talks to
         for i in self.ch_arr:
             i.update()
 
+    def get_square(self, coord):
+        return self.map_arr[coord[0]][coord[1]][coord[2]]
+
     def add_lowbehavior(self, lowbehavior):
         
         self.lb_arr.append(lowbehavior)
