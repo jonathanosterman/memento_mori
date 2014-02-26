@@ -1,3 +1,4 @@
+#by 6n0m0n, SpaceSheep, and malachite_sprite
 from collections import Counter
 
 class LS_square: #handles all info about a map location

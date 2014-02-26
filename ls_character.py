@@ -1,3 +1,5 @@
+#by 6n0m0n, SpaceSheep, and malachite_sprite
+
 from ls_behavior import LS_behavior
 from ls_lowbehavior import LS_lowbehavior
 from ls_move import LS_move

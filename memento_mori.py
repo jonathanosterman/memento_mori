@@ -1,3 +1,4 @@
+#by 6n0m0n, SpaceSheep, and malachite_sprite
 from ls_square import LS_square
 from ls_session import LS_session
 from tkinter import *
